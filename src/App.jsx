@@ -8,6 +8,7 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
+  BirdIcon,
 } from "./components/Icons.jsx"
 
 function useTheme() {
@@ -65,19 +66,18 @@ function Hero() {
         </span>
       </h1>
       <div className="hero-now">
-        <span className="dot" aria-hidden="true" />
+        <BirdIcon size={18} />
         <span>
           Currently building agentic RAG systems @ Powell :)
         </span>
       </div>
       <p className="hero-text">
-        I'm interested in <strong>robotics</strong>, <strong>AI/ML</strong>,{" "}
-        <strong>full-stack development</strong>, and <strong>real estate tech</strong>.{" "}
+        I love building <strong>applied AI/ML projects</strong> in prod environments and acquiring{" "}
+        <strong>real estate</strong>.{" "}
         <a href={`mailto:${profile.email}`}>Let's chat!</a>
       </p>
       <p className="hero-text">
-        Artificial Intelligence at Texas A&M University, Dean's List, and a licensed Texas real
-        estate agent.
+        Artificial Intelligence @ Texas A&M (Dean's List), and licensed in Real Estate.
       </p>
     </section>
   )

@@ -1,26 +1,26 @@
 :root {
-  --bg: #fafafa;
-  --surface: #ffffff;
-  --text: #18181b;
-  --text-secondary: #52525b;
-  --text-muted: #a1a1aa;
-  --border: #e4e4e7;
-  --accent: #3b82f6;
-  --pill-bg: #f4f4f5;
-  --pill-text: #52525b;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --bg: #f6f1e9;
+  --surface: #fbf8f3;
+  --text: #171614;
+  --text-secondary: #524639;
+  --text-muted: #918574;
+  --border: #ddd4c6;
+  --accent: #b5651d;
+  --pill-bg: #efe9dd;
+  --pill-text: #524639;
+  --shadow: 0 1px 2px rgba(23, 22, 20, 0.06);
 }
 
 [data-theme="dark"] {
-  --bg: #0e0f11;
-  --surface: #16181c;
-  --text: #e7e7ea;
-  --text-secondary: #a3a6ad;
-  --text-muted: #6b6f78;
-  --border: #26282e;
-  --accent: #7aa7f7;
-  --pill-bg: #1f2126;
-  --pill-text: #a3a6ad;
+  --bg: #171614;
+  --surface: #211e1a;
+  --text: #f3ede2;
+  --text-secondary: #c9c0b3;
+  --text-muted: #918574;
+  --border: #524639;
+  --accent: #d98547;
+  --pill-bg: #2a2621;
+  --pill-text: #c9c0b3;
   --shadow: none;
 }
 
@@ -172,20 +172,68 @@ main {
 
 .hero-now {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   color: var(--text-secondary);
   font-size: 15px;
   margin-bottom: 16px;
 }
 
-.hero-now .dot {
+.hero-now .bird-icon {
   flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--text-muted);
-  transform: translateY(-1px);
+  color: var(--accent);
+  overflow: visible;
+  transform: translateY(2px);
+}
+
+.bird-float {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bird-bob 2.4s ease-in-out infinite;
+}
+
+.bird-wing {
+  transform-box: fill-box;
+}
+
+.bird-wing-left {
+  transform-origin: 100% 78%;
+  animation: bird-flap-left 0.9s ease-in-out infinite;
+}
+
+.bird-wing-right {
+  transform-origin: 0% 78%;
+  animation: bird-flap-right 0.9s ease-in-out infinite;
+}
+
+@keyframes bird-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5px);
+  }
+}
+
+@keyframes bird-flap-left {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes bird-flap-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
 }
 
 .hero-text {

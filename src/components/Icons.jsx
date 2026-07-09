@@ -56,6 +56,38 @@ export function LinkedinIcon({ size = 20 }) {
   )
 }
 
+export function BirdIcon({ size = 18 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      className="bird-icon"
+      fill="none"
+      aria-hidden="true"
+    >
+      <g className="bird-float">
+        <path
+          className="bird-wing bird-wing-left"
+          d="M2 14Q7 5 12 12"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          className="bird-wing bird-wing-right"
+          d="M12 12Q17 5 22 14"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  )
+}
+
 export function MailIcon({ size = 20 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base} aria-hidden="true">
